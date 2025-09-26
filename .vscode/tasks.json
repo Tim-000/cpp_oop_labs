@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake Configure",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-S",
+                "Lab1",
+                "-B",
+                "Lab1/build",
+                "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+            ],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake Build",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "Lab1/build"
+            ],
+            "dependsOn": "CMake Configure",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Program",
+            "type": "shell",
+            "command": "./Lab1/build/bracket_checker",
+            "group": "build",
+            "dependsOn": "CMake Build"
+        },
+        {
+            "label": "Run Tests",
+            "type": "shell",
+            "command": "./Lab1/build/tests",
+            "group": "test",
+            "dependsOn": "CMake Build"
+        }
+    ]
+}
