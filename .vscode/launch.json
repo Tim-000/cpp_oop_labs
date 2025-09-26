@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Program",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Lab1/build/bracket_checker",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/Lab1",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "CMake Build"
+        }
+    ]
+}
